@@ -3,36 +3,147 @@ title: My homepage
 layout: 'base.njk'
 ---
       
+
+<!-- Hero Section -->
 <section class="hero">
   <div class="container flow">
-      <div class="hero__content flow">
-        <h1 class="section-title">Welcome to my blog!</h1>
-        <p>I use this space to document my adventures in front-end development, sharing how I’ve overcome issues I’ve run into, useful resources, and more.</p>
-        <p>Below are some of my favourite articles, or you can go to the blog page to see my most recent posts.</p>
-        <div class="flex-group">
-          <a href="#featured-articles" class="btn btn--primary">Featured articles</a>
-          <a href="./blog" class="btn btn--neutral">Most recent articles</a>
-        </div>
-      </div>
-      <div>
-        <img src="//unsplash.it/510" alt="" class="hero__image">
-      </div>
+    <div class="hero__content flow">
+      <p class="highlight">HELLO!</p>
+      <h1 class="section-title">I'm <span style="color: #fbbf24;">Arjun Tarakesh</span></h1>
+      <p>A Cybersecurity Professional</p>
+    </div>
+    <div>
+      <img src="your-photo-path.jpg" alt="Arjun Tarakesh" class="hero__image">
+    </div>
   </div>
 </section>
 
-<section id="featured-articles" class="featured-articles">
+<!-- About Section -->
+<section class="about">
   <div class="container flow">
-    <h2 class="section-title text-center ">Featured articles</h2>
-    <p class="text-center">Here is a sample of articles which I feel give you a good idea of what this site is all about.</p>
-    <ul role="list" class="articles__list flow">
-
-      {%- for post in collections.featured | reverse -%}
-        {% include 'article-snippet.njk' %}
-      {%- endfor %} 
+    <h2 class="section-title">About</h2>
+    <p>👋 Hello, I’m Arjun Tarakesh</p>
     
+    <h3>🧑‍💻 Brief Introduction</h3>
+    <p>I’m a cybersecurity professional passionate about threat detection, security operations, and automation. With a Distinction in MSc Information Security from Royal Holloway, University of London and hands-on experience in EDR, SIEM, IAM, and compliance, I strive to build robust and secure systems.</p>
+
+    <h3>🎯 Objective</h3>
+    <p>My focus lies in defending digital assets through automated and scalable defense strategies. I thrive in Security Operations Centers (SOCs), aiming to optimize incident response and elevate cyber resilience.</p>
+  </div>
+</section>
+
+<!-- Skills & Tools -->
+<section class="skills-tools">
+  <div class="container flow">
+    <h2 class="section-title">🛠️ Skills & Tools</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>SIEM & Threat Detection</h3>
+        <p>Deployed and configured correlation rules (Wazuh, Splunk, ELK Stack)</p>
+      </div>
+      <div class="card">
+        <h3>Vulnerability Management</h3>
+        <p>Reduced high-risk vulnerabilities through scanning and patch prioritization</p>
+      </div>
+      <div class="card">
+        <h3>EDR & Endpoint Security</h3>
+        <p>Managed 500+ endpoints using Sophos XDR, Endpoint Central</p>
+      </div>
+      <div class="card">
+        <h3>IAM & Network Security</h3>
+        <p>MFA, RBAC, firewall policy implementation</p>
+      </div>
+      <div class="card">
+        <h3>Security Auditing & Compliance</h3>
+        <p>Cyber Essentials readiness, ISO 27001, GDPR</p>
+      </div>
+      <div class="card">
+        <h3>Security Automation</h3>
+        <p>Used PowerShell & Python scripts to reduce manual remediation</p>
+      </div>
+    </div>
+
+    <h3>🔧 Tools</h3>
+    <ul>
+      <li><strong>SIEM:</strong> Splunk, ELK, Wazuh</li>
+      <li><strong>EDR:</strong> Sophos XDR, Endpoint Central</li>
+      <li><strong>Monitoring:</strong> Event Viewer, Sysmon, Jamf MDM</li>
+      <li><strong>Cloud/Admin:</strong> Microsoft 365 Admin, Entra ID</li>
+      <li><strong>Networking:</strong> Wireshark, Nmap, Metasploit</li>
+      <li><strong>Languages:</strong> Python, PowerShell, KQL, SQL</li>
     </ul>
   </div>
-</section> 
+</section>
 
+<!-- Experience Cards (like Resume style) -->
+<section class="resume">
+  <div class="container flow">
+    <h2 class="section-title">Experience</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3 class="highlight">Role</h3>
+        <p>Cybersecurity Analyst</p>
+        <p class="small-text">XYZ Security Solutions</p>
+      </div>
+
+      <div class="card">
+        <h3 class="highlight">2022–2023</h3>
+        <p>MSc Information Security</p>
+        <p class="small-text">Royal Holloway, University of London</p>
+      </div>
+
+      <div class="card">
+        <h3 class="highlight">Certification</h3>
+        <p>TryHackMe SOC Level 1</p>
+        <p class="small-text">TryHackMe</p>
+      </div>
+
+      <div class="card">
+        <h3 class="highlight">2018–2021</h3>
+        <p>BSc Computer Science</p>
+        <p class="small-text">Some University Name</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Articles (leave as-is per your request) -->
+<section id="featured-articles" class="featured-articles">
+  <div class="container flow">
+    <h2 class="section-title text-center">Featured articles</h2>
+    <p class="text-center">Here is a sample of articles which I feel give you a good idea of what this site is all about.</p>
+    <ul role="list" class="articles__list flow">
+      {%- for post in collections.featured | reverse -%}
+        {% include 'article-snippet.njk' %}
+      {%- endfor %}
+    </ul>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact">
+  <div class="container flow">
+    <h2 class="section-title">Contact Me</h2>
+    <div class="grid">
+      <div class="card text-center">
+        <a href="https://linkedin.com/in/arjun-tarakesh" target="_blank">
+          <i class="fab fa-linkedin fa-2x"></i>
+          <p>LinkedIn</p>
+        </a>
+      </div>
+      <div class="card text-center">
+        <a href="https://github.com/arjun-tarakesh" target="_blank">
+          <i class="fab fa-github fa-2x"></i>
+          <p>GitHub</p>
+        </a>
+      </div>
+      <div class="card text-center">
+        <p>Email: arjuntarakesh01@gmail.com</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 
